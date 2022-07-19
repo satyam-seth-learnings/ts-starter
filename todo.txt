@@ -1,0 +1,8 @@
+add jsdom starter 
+and mocha  register jsdom global
+
+typescript browserify 
+gulp 
+sass setup
+add workflow
+git pre commit hook
