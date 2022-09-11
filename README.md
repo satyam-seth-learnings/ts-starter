@@ -4,30 +4,30 @@
 
 - Generate package.json
 
-```bash
-npm init -y
-```
+  ```bash
+  npm init -y
+  ```
 
 2- Setup TypeScript
 
 - Install typescript
 
-```bash
-npm install -D typescript
-```
+  ```bash
+  npm install -D typescript
+  ```
 
 - Generate a tsconfig.json file
 
-```bash
-npx tsc --init
-```
+  ```bash
+  npx tsc --init
+  ```
 
 - Add Build and Watch Script to package.json
 
-```json
-    "build": "tsc",
-    "dev": "tsc -w",
-```
+  ```json
+      "build": "tsc",
+      "dev": "tsc -w",
+  ```
 
 TS Config Reference Link - https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 
@@ -35,16 +35,16 @@ TS Config Reference Link - https://www.typescriptlang.org/docs/handbook/tsconfig
 
 - Generate .eslintrc.json file and install dependencies
 
-```bash
-npx eslint --init
-```
+  ```bash
+  npx eslint --init
+  ```
 
 - Add lint check and fix script to package.json
 
-```json
-    "lint": "eslint ./src/ts/**/*.ts",
-    "lint:fix": "eslint ./src/ts/**/*.ts --fix",
-```
+  ```json
+      "lint": "eslint ./src/ts/**/*.ts",
+      "lint:fix": "eslint ./src/ts/**/*.ts --fix",
+  ```
 
 ESLint Config Reference Link - https://eslint.org/docs/user-guide/configuring
 
@@ -56,33 +56,33 @@ eslint common rules reference link - https://peaku.co/questions/1365-usando-esli
 
 - Install Prettier
 
-```bash
-npm install -D prettier
-```
+  ```bash
+  npm install -D prettier
+  ```
 
 - Add format script to package.json
 
-```json
-    "format": "prettier --write ./src/ts/**/*.ts",
-```
+  ```json
+      "format": "prettier --write ./src/ts/**/*.ts",
+  ```
 
 - Add Prettier config file (.prettierrc)
 
-```json
-{
-  "semi": true,
-  "singleQuote": true,
-  "trailingComma": "all"
-}
-```
+  ```json
+  {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+  ```
 
 5- Avoiding conflicts when working with ESLint and Prettier
 
 - Install dependencies
 
-```bash
-npm install -D eslint-config-prettier eslint-plugin-prettier
-```
+  ```bash
+  npm install -D eslint-config-prettier eslint-plugin-prettier
+  ```
 
 Setup Reference Links
 
@@ -94,34 +94,63 @@ Setup Reference Links
 
 - Add rules to .vscode/settings.json
 
-```json
-{
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.singleQuote": true,
-  "editor.formatOnSave": true,
-  "[json]": {
-    "editor.tabSize": 2
-  },
-  "[typescript]": {
-    "editor.tabSize": 4,
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  ```json
+  {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.singleQuote": true,
+    "editor.formatOnSave": true,
+    "[json]": {
+      "editor.tabSize": 2
+    },
+    "[typescript]": {
+      "editor.tabSize": 4,
+      "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    }
   }
-}
-```
+  ```
 
 7- Setup Testing Environment
 
 - Install dependencies
 
-```bash
-npm install -D chai mocha ts-node @types/chai @types/mocha
-```
+  ```bash
+  npm install -D chai mocha ts-node @types/chai @types/mocha
+  ```
 
 - Add Mocha Test Explorer Config to .vscode/settings.json
 
-```json
-{
-  "mochaExplorer.require": "ts-node/register",
-  "mochaExplorer.files": "tests/*.ts"
-}
-```
+  ```json
+  {
+    "mochaExplorer.require": "ts-node/register",
+    "mochaExplorer.files": "tests/*.ts"
+  }
+  ```
+
+- Add Test Script to package.json
+
+  ```json
+      "test": "mocha --require ts-node/register tests/*.ts",
+  ```
+
+8- Setup JSDOM
+
+- Install dependencies
+
+  ```bash
+  npm install -D jsdom jsdom-global
+
+  ```
+
+- Update Mocha Test Explorer Config in .vscode/settings.json
+
+  ```json
+  {
+    "mochaExplorer.require": ["ts-node/register", "jsdom-global/register"]
+  }
+  ```
+
+- Update Test Script in package.json
+
+  ```json
+    test": "mocha -r ts-node/register -r jsdom-global/register tests/*test.ts"
+  ```

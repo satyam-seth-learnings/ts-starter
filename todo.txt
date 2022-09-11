@@ -1,6 +1,4 @@
-add jsdom starter 
-and mocha  register jsdom global
-
+add ts-fetch 
 typescript browserify 
 gulp 
 sass setup

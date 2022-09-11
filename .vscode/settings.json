@@ -8,7 +8,7 @@
     "editor.tabSize": 4,
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
-  "mochaExplorer.require": "ts-node/register",
+  "mochaExplorer.require": ["ts-node/register", "jsdom-global/register"],
   "mochaExplorer.files": "tests/*test.ts",
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
