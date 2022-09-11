@@ -29,7 +29,7 @@
       "dev": "tsc -w",
   ```
 
-TS Config Reference Link - https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+- TS Config Reference Link - https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 
 3- Setup ESLint
 
@@ -46,11 +46,11 @@ TS Config Reference Link - https://www.typescriptlang.org/docs/handbook/tsconfig
       "lint:fix": "eslint ./src/ts/**/*.ts --fix",
   ```
 
-ESLint Config Reference Link - https://eslint.org/docs/user-guide/configuring
+- ESLint Config Reference Link - https://eslint.org/docs/user-guide/configuring
 
-airbnb Style Guide Reference Link - https://github.com/airbnb/javascript
+- airbnb Style Guide Reference Link - https://github.com/airbnb/javascript
 
-eslint common rules reference link - https://peaku.co/questions/1365-usando-eslint-con-mecanografiado:-no-se-puede-resolver-la-ruta-al-modulo
+- eslint common rules reference link - https://peaku.co/questions/1365-usando-eslint-con-mecanografiado:-no-se-puede-resolver-la-ruta-al-modulo
 
 4- Setup Prettier
 
@@ -84,11 +84,11 @@ eslint common rules reference link - https://peaku.co/questions/1365-usando-esli
   npm install -D eslint-config-prettier eslint-plugin-prettier
   ```
 
-Setup Reference Links
+- Setup Reference Links
 
-- https://dev.to/s2engineers/how-to-make-eslint-work-with-prettier-avoiding-conflicts-and-problems-57pi
-- https://blog.logrocket.com/linting-typescript-using-eslint-and-prettier/
-- https://prettier.io/docs/en/options.html
+  - https://dev.to/s2engineers/how-to-make-eslint-work-with-prettier-avoiding-conflicts-and-problems-57pi
+  - https://blog.logrocket.com/linting-typescript-using-eslint-and-prettier/
+  - https://prettier.io/docs/en/options.html
 
 6- Config VSCode settings
 
@@ -154,3 +154,8 @@ Setup Reference Links
   ```json
     test": "mocha -r ts-node/register -r jsdom-global/register tests/*test.ts"
   ```
+
+- Setup Reference Links
+
+  - jsdom Reference Link - https://www.npmjs.com/package/jsdom
+  - jsdom-global Reference Link - https://www.npmjs.com/package/jsdom-global
