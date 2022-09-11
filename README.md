@@ -159,3 +159,19 @@
 
   - jsdom Reference Link - https://www.npmjs.com/package/jsdom
   - jsdom-global Reference Link - https://www.npmjs.com/package/jsdom-global
+
+9- Setup NYC for Test Coverage
+
+- Install dependency
+
+  ```bash
+  npm install -D nyc
+  ```
+
+- Add Test Coverage Script to package.json
+
+  ```json
+  "test": "nyc --reporter=lcov --reporter=html --reporter=text mocha -r ts-node/register -r jsdom-global/register tests/*test.ts",
+  ```
+
+- Setup Reference Links - https://github.com/istanbuljs/nyc
