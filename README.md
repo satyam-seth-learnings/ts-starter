@@ -175,3 +175,11 @@
   ```
 
 - Setup Reference Links - https://github.com/istanbuljs/nyc
+
+10- Setup [Nock](https://github.com/nock/nock) for Mocking HTTP Requests
+
+- Install dependency
+
+  ```bash
+  npm install -D nock
+  ```

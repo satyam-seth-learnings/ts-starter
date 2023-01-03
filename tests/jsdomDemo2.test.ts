@@ -2,9 +2,8 @@ import { after, before, describe, it } from 'mocha';
 
 import { expect } from 'chai';
 
+import jsdom from 'jsdom-global';
 import ExamplePage from '../src/ts/jsdomDemo2';
-
-const jsdom = require('jsdom-global');
 
 describe('Test Example Page Class', () => {
   let dom: any;
